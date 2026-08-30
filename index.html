@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>PACHINKO // Neon Ball Race</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1 class="title">PACHINKO</h1>
+    </div>
+    <button id="soundToggle" class="sound-btn" type="button" aria-pressed="true">
+      <span class="sound-icon" aria-hidden="true">♪</span>
+      <span class="sound-label">SOUND ON</span>
+    </button>
+  </header>
+
+  <main class="layout">
+
+    <section class="board-wrap">
+      <div class="board-frame">
+        <canvas id="boardCanvas" aria-label="Pachinko race board"></canvas>
+        <div class="board-glow-edge" aria-hidden="true"></div>
+      </div>
+      <p class="board-caption" id="statusLine">ENTER PLAYERS AND PRESS START</p>
+      <p class="board-timer" id="raceTimer">TIME: 00:00</p>
+    </section>
+
+    <aside class="panel">
+
+      <div class="panel-block players-block">
+        <div class="panel-block-head">
+          <h2>PLAYERS</h2>
+          <span class="panel-hint">UP TO 10</span>
+        </div>
+        <form id="playersForm" class="players-form" autocomplete="off">
+          <!-- rows injected by script.js -->
+        </form>
+      </div>
+
+      <button id="startBtn" class="start-btn" type="button">
+        <span class="start-bracket">[</span>
+        <span class="start-text">START</span>
+        <span class="start-bracket">]</span>
+      </button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+
+      <div class="panel-block results-block">
+        <div class="panel-block-head">
+          <h2>RESULT</h2>
+        </div>
+        <ol class="results-list" id="resultsList">
+          <li class="results-empty">No race yet</li>
+        </ol>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <footer class="foot-note">
+    <span>Local browser race &middot; no accounts &middot; no leaderboard &middot; nothing leaves your device</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
